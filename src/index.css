@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import "@radix-ui/themes/styles.css";
+
+
+:root {
+
+    /* --- Paleta de Cores --- */
+
+    --color-lilas: #b793c4;
+    --color-magenta: #e080b4;
+    --color-amarelo: #edd01f;
+    --color-cinza-light: #f0efef;
+    --color-cinza-dark: #2d2a29;
+}
+
+:root,
+.radix-themes {
+
+    /* > Aplicação */
+
+    /* Accent (Magenta) */
+    --accent-9: var(--color-magenta);
+    --accent-10: #e080b4;
+
+    /* Secondary (Lilás) */
+    --accent-6: var(--color-lilas);
+
+    /* Backgrounds */
+    --gray-1: var(--color-cinza-light);
+    --color-background: var(--color-cinza-light);
+    --gray-12: var(--color-cinza-dark);
+
+}
+
+body {
+    background-color: var(--color-cinza-light);
+    color: var(--color-cinza-dark);
+}
