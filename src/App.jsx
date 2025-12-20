@@ -1,4 +1,4 @@
-import NavBar from './components/navigation/NavBar';
+import NavBar from './components/Navigation/NavBar';
 import ViewPage from './pages/ViewPage';
 
 function App() {
