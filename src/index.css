@@ -6,11 +6,15 @@
 
     /* --- Paleta de Cores --- */
 
-    --color-lilas: #b793c4;
+    --color-lilas: #dab4e8;
     --color-magenta: #e080b4;
     --color-amarelo: #edd01f;
     --color-cinza-light: #f0efef;
     --color-cinza-dark: #2d2a29;
+
+    --color-circle: linear-gradient(50deg, #53002e, #2e0019);
+    --color-card: linear-gradient(50deg, rgb(59, 0, 81), #1e0029);
+    --color-botao-amarelo: linear-gradient(130deg, #edd01f, #978300);
 }
 
 :root,
@@ -27,12 +31,12 @@
 
     /* Backgrounds */
     --gray-1: var(--color-cinza-light);
-    --color-background: var(--color-cinza-light);
+    --color-background: transparent;
     --gray-12: var(--color-cinza-dark);
 
 }
 
 body {
-    background-color: var(--color-cinza-light);
+    background-color: transparent;
     color: var(--color-cinza-dark);
 }

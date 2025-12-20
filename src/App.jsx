@@ -1,9 +1,11 @@
-import HomeView from './pages/HomeView';
+import NavBar from './components/navigation/NavBar';
+import ViewPage from './pages/ViewPage';
 
 function App() {
   return (
     <>
-      <HomeView />
+      <NavBar />
+      <ViewPage />
     </>
   )
 }
