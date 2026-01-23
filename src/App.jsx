@@ -1,5 +1,5 @@
-import NavBar from './components/Navigation/NavBar';
-import ViewPage from './pages/ViewPage';
+import NavBar from '@navigation/NavBar';
+import ViewPage from '@pages/ViewPage';
 
 function App() {
   return (

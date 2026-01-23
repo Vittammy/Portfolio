@@ -1,6 +1,6 @@
 // => Componentes React
-import AuroraBackground from '@/components/Layout/AuroraBackground'
-import ContainerPrincipal from '../components/Containers/ContainerPrincipal'
+import AuroraBackground from '@layout/AuroraBackground'
+import ContainerPrincipal from '@containers/ContainerPrincipal'
 
 function ViewPage() {
     return (

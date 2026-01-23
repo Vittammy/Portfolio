@@ -12,9 +12,48 @@
     --color-cinza-light: #f0efef;
     --color-cinza-dark: #2d2a29;
 
+    /* Tons de Azul */
+    --color-blue-principal: #00242e;
+    --color-blue-01: #34a8de;
+    --color-blue-02: #74c3d9;
+
+    /* Tons de Verde */
+    --color-green-light: #145354;
+    --color-green-dark: rgb(0, 41, 38);
+    
+    --color-button-blue: #005c55;
+
+    /* Backgrounds */
+    --background-blue: linear-gradient(145deg, #145354, var(--color-blue-principal));
+    --background-lilas: linear-gradient(145deg, #53002e, #2e0019, #1e0029);
     --color-circle: linear-gradient(50deg, #53002e, #2e0019);
     --color-card: linear-gradient(50deg, rgb(59, 0, 81), #1e0029);
     --color-botao-amarelo: linear-gradient(130deg, #edd01f, #978300);
+
+    --background-card: linear-gradient(145deg, #d3d3d3, #bfc7cc);
+
+    /* Box-shadow */
+    --boxshadow-card: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+    
+    /* Fontes */
+    --font-size-base: 16px;
+    --font-size-h1: clamp(2rem, 8vw, 5.5rem);
+    --font-size-h5: clamp(0.9rem, 5vw, 1.5rem);
+    --font-size-sub: clamp(1.0rem, 4vw, 1.3rem);
+    --font-size-p: clamp(0.9rem, 3vw, 1.1rem);
+    --font-size-menu-icon: 1.8rem;
+    --font-size-menu-text: 1.2rem;
+
+    /* Raios de Borda */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-botao: 50px;
+    --border-radius-circle: 100%;
+
+    /* Transições */
+    --transition-all: all 0.2s ease-in-out;
 }
 
 :root,
@@ -37,6 +76,26 @@
 }
 
 body {
+    width: 100%;
+    margin: 0;
+
     background-color: transparent;
     color: var(--color-cinza-dark);
 }
+
+
+
+
+
+    /* --- Paleta de Cores (rosa - roxo) --- */
+
+    /* --color-lilas: #dab4e8;
+    --color-magenta: #e080b4;
+    --color-amarelo: #edd01f;
+    --color-cinza-light: #f0efef;
+    --color-cinza-dark: #2d2a29;
+
+    --background-lilas: linear-gradient(145deg, #53002e, #2e0019, #1e0029);
+    --color-circle: linear-gradient(50deg, #53002e, #2e0019);
+    --color-card: linear-gradient(50deg, rgb(59, 0, 81), #1e0029);
+    --color-botao-amarelo: linear-gradient(130deg, #edd01f, #978300); */

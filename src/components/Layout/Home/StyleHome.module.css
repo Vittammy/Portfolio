@@ -1,0 +1,33 @@
+.home_nome {
+  display: flex;
+  flex-direction: column;
+
+  text-align: start;
+  width: 70%;
+  padding: 1.5rem;
+
+  color: var(--color-cinza-light);
+}
+
+.home_nome h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 500;
+}
+
+.home_nome h5 {
+    font-size: var(--font-size-h5);
+    margin-left: 1rem;
+}
+
+
+
+
+@media(max-width: 800px) {
+    .home_nome {
+        width: 100%;
+    }
+    
+    .home_nome h5 {
+        margin-left: 0;
+    }
+}

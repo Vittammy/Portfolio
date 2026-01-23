@@ -12,7 +12,18 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      // => Principal
+      '@style': path.resolve(__dirname, './src/css'),
+      '@basics': path.resolve(__dirname, './src/imports'),
+      '@assets': path.resolve(__dirname, './src/assets'),
+      '@pages': path.resolve(__dirname, './src/pages'),
+
+      // => Acessibilidade
+      '@components': path.resolve(__dirname, './src/components'),
+      '@containers': path.resolve(__dirname, './src/components/Containers'),
+      '@control': path.resolve(__dirname, './src/components/Control'),
+      '@layout': path.resolve(__dirname, './src/components/Layout'),
+      '@navigation': path.resolve(__dirname, './src/components/Navigation'),
     },
   },
 })

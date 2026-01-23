@@ -1,11 +1,11 @@
-import CardProjeto from '@/components/Layout/Cards/CardProjeto'
-import style from '@/css/StyleComponents.module.css'
+import CardProjeto from '@layout/Cards/CardProjeto'
+import style from '@style/StyleComponents.module.css'
 
 import { Text, Heading } from '@radix-ui/themes'
 
 // => Images
-import image from '@/assets/images/logo/logo_simples.png'
-import mweb from '@/assets/images/projetos/mweb.png'
+import image from '@assets/images/logo/logo_simples.png'
+import mweb from '@assets/images/projetos/mweb.png'
 
 export default function BlocoProjetos() {
     return(

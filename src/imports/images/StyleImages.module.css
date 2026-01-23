@@ -1,0 +1,41 @@
+/* ============================ Imagem de Perfil */
+
+.profile_img {
+  width: 90%;
+
+  border-radius: var(--border-radius-circle);
+}
+
+
+/* ============================ CONDIÇÕES PARA MOBILE ============================ */
+
+@media (max-width: 800px) {
+    .profile_img {
+      display: none;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 1500px) {
+  .profile_img {
+    padding: 4rem;
+  }
+}
+
+@media (max-height: 450px) {
+  .profile_img {
+    display: none;
+  }
+}
+
+
+
+
+
+/* ============================ Imagem de Projeto */
+
+.projeto_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+}

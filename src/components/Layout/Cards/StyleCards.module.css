@@ -1,0 +1,42 @@
+.card_01 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex-direction: column;
+
+    min-width: 100%;
+    min-height: 0;
+    height: auto;
+
+    border: none;
+    border-radius: var(--border-radius-lg);
+
+    background: var(--background-card);
+    box-shadow: var(--boxshadow-card);
+    color: black;
+}
+
+/* => GRID LAYOUT */
+
+.fullWidthField {
+  grid-column: 1 / span 2;
+}
+
+.halfWidthField {
+  grid-column: span 1;
+}
+
+
+
+
+/* ============================ CARROSSEL ============================ */
+
+.carrossel_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 100%;
+  max-height: 25rem;
+}

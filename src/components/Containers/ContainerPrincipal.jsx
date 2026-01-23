@@ -1,17 +1,23 @@
-import style from '@/css/StyleComponents.module.css'
+import style from '@style/StyleComponents.module.css'
 
 // => Components - Blocos
-import BlocoHome from './Blocos/BlocoHome'
-import BlocoProjetos from './Blocos/BlocoProjetos'
+import BlocoHome from '@containers/Blocos/BlocoHome'
+import BlocoProjetos from '@containers/Blocos/BlocoProjetosdois'
 
 export default function ContainerPrincipal() {
     return(
         <>
-            <BlocoHome />
+            <section id='home'>
+                <BlocoHome />
+            </section>
             
-            <div className={`${style.container_principal} rounded-t-[200px]`}>
+            {/* <div id='projetos' className={`${style.container_principal} rounded-t-[200px]`}>
                 <BlocoProjetos />
-            </div>
+            </div> */}
+
+            <section id='projetos'>
+                <BlocoProjetos />
+            </section>
         </>
     )
 }

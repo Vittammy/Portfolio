@@ -1,8 +1,8 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { motion } from 'framer-motion';
-import style from '@/css/StyleComponents.module.css';
+import style from '@style/StyleComponents.module.css';
 
-import { Icon } from '@/icons'
+import { Icon } from '@basics/icons'
 
 export default function CardProjeto({ projeto }) {
   return (

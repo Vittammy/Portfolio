@@ -1,8 +1,8 @@
 // src/components/AuroraBackground.jsx
-import React from 'react';
+import * as React from 'react';
 import { motion } from 'framer-motion';
 
-import style from '@/css/StyleComponents.module.css'
+import style from '@style/StyleComponents.module.css'
 
 const AuroraBackground = () => {
 
