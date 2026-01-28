@@ -6,6 +6,7 @@ import { Theme } from "@radix-ui/themes";
 
 import './index.css';
 import App from './App.jsx'
+import '/fonts/Montserrat/static/Montserrat-Regular.ttf'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

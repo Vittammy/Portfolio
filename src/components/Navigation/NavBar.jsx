@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import style from '@navigation/NavBar.module.css';
+import { useIsMobile } from '@control/useControl'
 
 // => Components
 import HomeTitle from '@layout/Home/Home_Title'
@@ -21,43 +22,47 @@ function NavBar() {
 
 
     const temFundo = contentKey !== 'home' || isScrolled;
+    const isMobile = useIsMobile();
 
 
     return (
         <>
-            <div className={style.navbar} 
-                style={{ background: temFundo ? "var(--color-blue-principal)" : "transparent", }}
-            >
-                <a href="#home" 
-                    onClick={() => setContentKey('home')}
-                    className={`${contentKey === 'home' ? style.link_ativo : style.navbar_link}`}
-                    >Home
-                </a>
 
-                <a href="#projetos"
-                    onClick={() => setContentKey('projetos')}
-                    className={`${contentKey === 'projetos' ? style.link_ativo : style.navbar_link}`}
-                    >Projetos
-                </a>
+                <div className={style.navbar} 
+                    style={{ background: temFundo ? "var(--background-blue)" : "transparent", }}
+                >
+                    <a href="#home" 
+                        onClick={() => setContentKey('home')}
+                        className={`${contentKey === 'home' ? style.link_ativo : style.navbar_link}`}
+                        >Home
+                    </a>
 
-                <a href="#sobre" 
-                    onClick={() => setContentKey('sobre mim')}
-                    className={`${contentKey === 'sobre mim' ? style.link_ativo : style.navbar_link}`}
-                    >Sobre mim
-                </a>
+                    <a href="#projetos"
+                        onClick={() => setContentKey('projetos')}
+                        className={`${contentKey === 'projetos' ? style.link_ativo : style.navbar_link}`}
+                        >Projetos
+                    </a>
 
-                <a href="#contatos" 
-                    onClick={() => setContentKey('contatos')}
-                    className={`${contentKey === 'contatos' ? style.link_ativo : style.navbar_link}`}
-                    >Contatos
-                </a>
-            </div>
+                    <a href="#sobre" 
+                        onClick={() => setContentKey('sobre mim')}
+                        className={`${contentKey === 'sobre mim' ? style.link_ativo : style.navbar_link}`}
+                        >Sobre mim
+                    </a>
 
-            <div className={style.navbar_02}
-                style={{ background: isScrolled ? "var(--background-blue)" : "transparent", }}
-            >
+                    <a href="#contatos" 
+                        onClick={() => setContentKey('contatos')}
+                        className={`${contentKey === 'contatos' ? style.link_ativo : style.navbar_link}`}
+                        >Contatos
+                    </a>
+                </div>
+
+            {isMobile && (
+                <div className={style.navbar_02}>
                 <HomeTitle/>
             </div>
+            )}
+            
+            
         </>
     )
 }

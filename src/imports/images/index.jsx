@@ -11,8 +11,8 @@ import style from '@basics/images/StyleImages.module.css'
 
 
 export const Projeto = {
-    mweb: [mweb1, mweb2, mweb3],
-    pessoa: [perfil, perfil, perfil],
+    MWeb: [mweb1],
+    Perfil: [perfil],
 }
 
 
@@ -24,6 +24,7 @@ function Image({ imagem, title, estilo }) {
     )
 }
 
+
 export const Images = {
     Perfil: () => {
         return (
@@ -33,7 +34,17 @@ export const Images = {
                 estilo={style.profile_img}
             />
         )
-    }
+    },
+
+    MWeb: () => {
+        return (
+            <Image
+                imagem={mweb2}
+                title="Project - MWeb"
+                estilo={style.projects_img}
+            />
+        )
+    },
 }
 
 export const ProjetosEstilizados = {

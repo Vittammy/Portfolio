@@ -6,7 +6,11 @@ import {
     UserSquare,
     FolderOpen,
     ChatCircle,
-    GitBranch,
+    GithubLogo,
+    Planet,
+    LinkedinLogo,
+    Envelope,
+    WhatsappLogo,
 } from 'phosphor-react';
 
 
@@ -14,11 +18,17 @@ export const IconsList = {
     User: UserSquare,
     FolderOpen: FolderOpen,
     Chat: ChatCircle,
-    GitHub: GitBranch,
+    GitHub: GithubLogo,
+    Google: Planet,
+    Linkedin: LinkedinLogo,
+    Email: Envelope,
+    Whatsapp: WhatsappLogo,
 }
 
 export function Icon({ icon }) {
+
     const IconComponent = IconsList[icon];
+
     if (!IconComponent) {
         return null;
     }
@@ -37,5 +47,5 @@ export function Icon({ icon }) {
     }, []);
 
 
-    return <IconComponent size={size} color="var(--color-lilas)" weight="duotone" />;
+    return <IconComponent size={size} color="var(--color-blue-principal)" weight="duotone" />;
 }

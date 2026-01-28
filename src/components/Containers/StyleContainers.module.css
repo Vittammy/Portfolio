@@ -37,33 +37,37 @@
 
 
 
-
-
 /* ============================ BLOCO PROJETOS ============================ */
 
 .bloco_projetos {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-
-  flex-direction: column;
-  
-  gap: 6rem;
-
   width: 100%;
-  padding: 2rem;
-
-  background-color: white;
+  padding: 3rem 1rem;
 }
 
 .bloco_projetos h1 {
-  padding: 0 1rem 0 0;
-
   color: var(--color-blue-principal);
-  border-bottom: 2px solid var(--color-blue-02);
 
   font-size: var(--font-size-h1);
-  font-weight: medium;
+  font-weight: bold;
+
+  line-height: var(--lh-tight);
+}
+
+.bloco_projetos p {
+  font-size: var(--font-size-p);
+}
+
+.text_projetos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  gap: 1rem;
 }
 
 
@@ -71,8 +75,11 @@
 
 .grid_projetos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  padding: 1.5rem;
+  margin: 0 auto;
 
   width: 100%;
 }
@@ -80,8 +87,36 @@
 
 /* ============================ MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
+  .grid_projetos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
   .grid_projetos {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+
+
+
+.rodape_view {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4rem;
+}
+
+.rodape_view p {
+  font-size: var(--font-size-p);
+  color: white;
+}
+
+.rodape_icons {
+  display: flex;
+  gap: 1rem;
 }

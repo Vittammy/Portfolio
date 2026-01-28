@@ -39,3 +39,9 @@
   object-fit: cover;
   border-radius: var(--border-radius-md);
 }
+
+.projects_img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
