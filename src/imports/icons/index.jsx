@@ -11,6 +11,8 @@ import {
     LinkedinLogo,
     Envelope,
     WhatsappLogo,
+    HouseSimple,
+    SquaresFour,
 } from 'phosphor-react';
 
 
@@ -23,9 +25,15 @@ export const IconsList = {
     Linkedin: LinkedinLogo,
     Email: Envelope,
     Whatsapp: WhatsappLogo,
+    Home: HouseSimple,
+    Projetos: SquaresFour,
 }
 
-export function Icon({ icon }) {
+export function Icon({ icon, name_color }) {
+
+    const wichColor = name_color;
+    const isNavIcon = name_color === 'navbar';
+    const isRodapeIcon = name_color === 'rodape';
 
     const IconComponent = IconsList[icon];
 
@@ -34,18 +42,24 @@ export function Icon({ icon }) {
     }
 
     const [size, setSize] = React.useState(35);
+    const media = window.matchMedia("(max-width: 800px)");
 
     React.useEffect(() => {
-        const media = window.matchMedia("(max-width: 800px)");
         const updateSize = () => {
             setSize(media.matches ? 24 : 35);
         };
-
         updateSize();
+
         media.addEventListener("change", updateSize);
         return () => media.removeEventListener("change", updateSize);
     }, []);
 
 
-    return <IconComponent size={size} color="var(--color-blue-principal)" weight="duotone" />;
+    return <IconComponent 
+                size={isRodapeIcon ? (size + 10) : size} 
+                color={isNavIcon ? 'white'
+                       : media.matches && isRodapeIcon ? 'white'
+                       : 'var(--color-blue-principal)'} 
+                weight="duotone" 
+            />;
 }

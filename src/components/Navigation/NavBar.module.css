@@ -16,6 +16,13 @@
     transition: var(--transition-all);
 }
 
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
 
 .navbar_02 {
     display: flex;

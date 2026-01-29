@@ -44,19 +44,6 @@
   padding: 3rem 1rem;
 }
 
-.bloco_projetos h1 {
-  color: var(--color-blue-principal);
-
-  font-size: var(--font-size-h1);
-  font-weight: bold;
-
-  line-height: var(--lh-tight);
-}
-
-.bloco_projetos p {
-  font-size: var(--font-size-p);
-}
-
 .text_projetos {
   display: flex;
   justify-content: center;
@@ -100,23 +87,50 @@
 }
 
 
+/* ============================ BLOCO SOBRE MIM ============================ */
+
+.bloco_sobre {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 5rem 1rem 0 1rem;
+  gap: 1rem;
+}
 
 
 
+
+/* ============================ RODAPE ============================ */
 
 .rodape_view {
   display: flex;
   justify-content: space-between;
+
+  margin-top: 5rem;
   width: 100%;
   padding: 4rem;
 }
 
 .rodape_view p {
-  font-size: var(--font-size-p);
   color: white;
 }
 
 .rodape_icons {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+/* ============================ MOBILE */
+
+@media (max-width: 890px) {
+  .rodape_view {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    gap: 1rem;
+  }
 }

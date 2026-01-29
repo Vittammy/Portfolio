@@ -82,7 +82,7 @@ function Card_01({ name_projeto, desc_projeto, links_projeto = [] }) {
                                         rel="noopener noreferrer"
                                         className={style.botao_link}
                                     >
-                                        <Icon icon={link.label} />
+                                        <Icon icon={link.label} color={false} />
                                     </a>
                             ))}
                         </div>

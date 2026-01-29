@@ -2,22 +2,23 @@ import style from '@containers/StyleContainers.module.css'
 
 // => Components - Blocos
 import BlocoHome from '@containers/Blocos/BlocoHome'
-import BlocoProjetos from '@containers/Blocos/BlocoProjetosdois'
+import BlocoProjetos from '@containers/Blocos/BlocoProjetos'
+import BlocoSobre from '@containers/Blocos/BlocoSobre'
 
 import { Icon } from '@basics/icons'
 
 export default function ContainerPrincipal() {
 
+    const color = 'rodape';
+
     return (
         <>
+            {/*     -----    Bloco Home     -----    */}
             <section id='home'>
                 <BlocoHome />
             </section>
 
-            {/* <div id='projetos' className={`${style.container_principal} rounded-t-[200px]`}>
-                <BlocoProjetos />
-            </div> */}
-
+            {/*     =====>    Curva superior */}
             <svg className='curva_page' viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path
                     fill="#f1f1f1"
@@ -25,10 +26,17 @@ export default function ContainerPrincipal() {
                 </path>
             </svg>
 
+            {/*     -----    Bloco Projetos     -----    */}
             <section id='projetos' style={{ backgroundColor: '#f1f1f1' }}>
                 <BlocoProjetos />
             </section>
 
+            {/*     -----    Bloco Sobre     -----    */}
+            <section id='sobre' style={{ backgroundColor: '#f1f1f1' }}>
+                <BlocoSobre />
+            </section>
+
+            {/*     =====>    Curva inferior */}
             <svg className='curva_page' viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path
                     fill="#f1f1f1"
@@ -36,32 +44,35 @@ export default function ContainerPrincipal() {
                 </path>
             </svg>
 
-            <div className={style.rodape_view}>
+
+            {/*     =====>    Rodapé */}
+            <div className={style.rodape_view} id='contatos' >
+
                 <p>© 2026 Vitória Amaral — Full Stack Developer</p>
 
                 <div className={style.rodape_icons}>
                     <a href="https://github.com/Vittammy"
                         target="_blank"
                         rel="noopener noreferrer">
-                        <Icon icon="GitHub" />
+                        <Icon icon="GitHub" name_color={color} />
                     </a>
 
                     <a href="https://www.linkedin.com/in/vitoria-tammy"
                         target="_blank"
                         rel="noopener noreferrer">
-                        <Icon icon="Linkedin" />
+                        <Icon icon="Linkedin" name_color={color} />
                     </a>
 
                     <a href="mailto:vitoriatammytec@email.com?subject=Contato pelo Portfólio&body=Olá Vitória,%0D%0AVim pelo seu portfólio!"
                         target="_blank"
                         rel="noopener noreferrer">
-                        <Icon icon="Email" />
+                        <Icon icon="Email" name_color={color} />
                     </a>
 
                     <a href="https://wa.me/5512996787160?text=Olá%20Vitória,%20vim%20pelo%20seu%20portfólio!"
                         target="_blank"
                         rel="noopener noreferrer">
-                        <Icon icon="Whatsapp" />
+                        <Icon icon="Whatsapp" name_color={color} />
                     </a>
                 </div>
             </div>

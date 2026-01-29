@@ -113,7 +113,17 @@ body {
 }
 
 
+/* ============================ Definição de fontes ============================ */
 
+h1 { font-size: var(--font-size-h1); font-weight: bold; }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5);}
+h6 { font-size: var(--font-size-h6); }
+p { font-size: var(--font-size-p); }
+
+h1, h2 { color: var(--color-blue-principal); line-height: var(--lh-tight); }
 
 
     /* --- Paleta de Cores (rosa - roxo) --- */

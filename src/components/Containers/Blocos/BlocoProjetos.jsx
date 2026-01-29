@@ -1,41 +1,61 @@
-import CardProjeto from '@layout/Cards/CardProjeto'
-import style from '@style/StyleComponents.module.css'
+import style from '@containers/StyleContainers.module.css'
+import { Projeto } from '@basics/images'
 
-import { Text, Heading } from '@radix-ui/themes'
+// => Components
+import Card_01 from '@layout/Cards/Card_01'
 
-// => Images
-import image from '@assets/images/logo/logo_simples.png'
-import mweb from '@assets/images/projetos/mweb.png'
+function BlocoProjetos() {
 
-export default function BlocoProjetos() {
-    return(
-        <>
-        <Heading size="9" weight="medium" style={{ marginBottom: '5rem' }}>✨ Projetos ✨</Heading>
+    const Projetos = [
+        {   name: 'MWeb', 
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            link: [
+                { label: 'Google', url: 'https://site.com/...' },
+                { label: 'GitHub', url: 'https://github.com/...' },
+            ],
+        },
 
-        <div className={style.cards_container}>
-          <CardProjeto
-                projeto={{
-                    imagem: mweb,
-                    titulo: 'MWeb - ERP System',
-                    // categoria: 'Desenvolvimento',
-                    descricao_completa: 'Um sistema de ERP responsável por agilizar e facilitar o trabalho no dia a dia, automatizando processos de preenchimento e cálculos. O sistema também oferece um controle pleno e visual do estoque.',
-                    tecnologias: ['JavaScript', 'PHP', 'React'],
-                    link_github: 'aaaa',
-                }}
-            />  
+        {   name: 'MWeb', 
+            desc: 'Outra descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit..',
+            link: [
+                { label: 'Google', url: 'https://site.com/...' },
+                { label: 'GitHub', url: 'https://github.com/...' },
+            ],
+        },
 
-            <CardProjeto
-                projeto={{
-                    imagem: image,
-                    titulo: 'Projeto 1',
-                    // categoria: 'Desenvolvimento',
-                    descricao_completa: 'Descrição do projeto 1.',
-                    tecnologias: ['jsx', 'php'],
-                    link_github: 'aaaa',
-                }}
-            /> 
+        {   name: 'MWeb', 
+            desc: 'Terceiraaa descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            link: [
+                { label: 'GitHub', url: 'https://github.com/...' },
+            ],
+        },
+    ]
+
+    return (
+        <div style={{ width: '100%', height: '100%' }}>
+
+            <div className={style.bloco_projetos}>
+
+                <div className={style.text_projetos}>
+                    <h1>My Work</h1>
+                    <p>A collection of projects I've worked on.</p>
+                </div>
+
+            </div>
+
+            <div className={style.grid_projetos}>
+                {Projetos.map((projeto, index) => (
+                    <Card_01 
+                        key={projeto.id || index}
+                        name_projeto={projeto.name}
+                        desc_projeto={projeto.desc}
+                        links_projeto={projeto.link}
+                    />
+                ))}
+            </div>
+            
         </div>
-        
-        </>
     )
 }
+
+export default BlocoProjetos;
