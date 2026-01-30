@@ -46,7 +46,7 @@ export function Icon({ icon, name_color }) {
 
     React.useEffect(() => {
         const updateSize = () => {
-            setSize(media.matches ? 24 : 35);
+            setSize(media.matches ? 35 : 45);
         };
         updateSize();
 
@@ -56,7 +56,9 @@ export function Icon({ icon, name_color }) {
 
 
     return <IconComponent 
-                size={isRodapeIcon ? (size + 10) : size} 
+                size={isRodapeIcon ? (size + 10) 
+                      : isNavIcon ? (size - 10)
+                      : size} 
                 color={isNavIcon ? 'white'
                        : media.matches && isRodapeIcon ? 'white'
                        : 'var(--color-blue-principal)'} 

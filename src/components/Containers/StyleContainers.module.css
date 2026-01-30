@@ -5,17 +5,18 @@
   align-items: center;
 
   max-width: 100%;
-  height: 100vh;
+  height: 90vh;
 
   padding: 2rem;
-  margin-left: 10rem;
+  margin-left: 3rem;
+  gap: 1.7rem;
 }
 
 
 /* ============================ Imagem de Perfil */
 
 .home_img {
-    width: 30%;
+    width: 27%;
 }
 
 
@@ -32,8 +33,11 @@
     padding: 5rem;
     margin-left: 1rem;
   }
-}
 
+  .home_img {
+    display: none;
+  }
+}
 
 
 
@@ -41,7 +45,7 @@
 
 .bloco_projetos {
   width: 100%;
-  padding: 3rem 1rem;
+  padding: 5rem 10rem;
 }
 
 .text_projetos {
@@ -50,6 +54,7 @@
   align-items: center;
 
   flex-direction: column;
+  text-align: center;
 
   width: 100%;
   height: 100%;
@@ -84,6 +89,10 @@
   .grid_projetos {
     grid-template-columns: 1fr;
   }
+
+  .bloco_projetos {
+    padding: 5rem 5rem 2rem 5rem;
+  }
 }
 
 
@@ -91,14 +100,44 @@
 
 .bloco_sobre {
   display: flex;
+  align-items: center;
+  
+  width: 100%;
+  padding: 0 10rem 5rem 10rem;
+  gap: 5rem;
+}
+
+.sobre_divider {
+  display: flex;
   flex-direction: column;
 
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
 
-  width: 100%;
-  padding: 5rem 1rem 0 1rem;
-  gap: 1rem;
+  gap: 2rem;
+  text-align: justify;
+}
+
+.sobre_img {
+  width: 30%;
+  border-radius: var(--border-radius-circle);
+}
+
+
+@media (max-width: 1280px) {
+  .bloco_sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre_img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .bloco_sobre {
+    padding: 0 5rem 2rem 5rem;
+  }
 }
 
 
@@ -128,9 +167,12 @@
 
 @media (max-width: 890px) {
   .rodape_view {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
+
+    text-align: center;
     margin-top: 0;
-    gap: 1rem;
+    gap: 2rem;
   }
 }

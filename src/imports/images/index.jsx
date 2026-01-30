@@ -1,5 +1,5 @@
 // => Imagens
-import perfil from '@assets/images/perfil/perfil_simples.png';
+import perfil from '@assets/images/perfil/vitoria1.jpg';
 
 // # Projeto - MWeb
 import mweb1 from '@assets/images/projetos/mweb/mweb1.png'

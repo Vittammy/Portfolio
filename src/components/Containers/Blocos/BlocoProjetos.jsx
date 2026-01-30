@@ -37,8 +37,8 @@ function BlocoProjetos() {
             <div className={style.bloco_projetos}>
 
                 <div className={style.text_projetos}>
-                    <h1>My Work</h1>
-                    <p>A collection of projects I've worked on.</p>
+                    <h1>Meus Trabalhos</h1>
+                    <h5>Uma coleção de projetos que desenvolvi ao longo da minha carreira.</h5>
                 </div>
 
             </div>

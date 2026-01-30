@@ -10,6 +10,25 @@
   color: var(--color-cinza-light);
 }
 
+.home_nome h1 {
+    font-family: "FonteSecundaria", sans-serif;
+}
+
+.home_links {
+    display: flex;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.link_item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-cinza-light);
+    border-radius: var(--border-radius-lg);
+}
+
 
 @media(max-width: 800px) {
     .home_nome {
@@ -19,4 +38,31 @@
     .home_nome h5 {
         margin-left: 0;
     }
+
+    .home_links {
+        margin-top: 1rem;
+    }
+    .link_item {
+        padding: 1rem;
+    }
+}
+
+
+
+/* ===================== Carrossel de icons ======================= */
+
+.icon_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    gap: 2rem;
+    padding: 5rem 1rem;
+
+    background: transparent;
+}
+
+.icon_tech {
+    color: white;
 }

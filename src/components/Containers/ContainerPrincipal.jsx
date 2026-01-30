@@ -5,6 +5,8 @@ import BlocoHome from '@containers/Blocos/BlocoHome'
 import BlocoProjetos from '@containers/Blocos/BlocoProjetos'
 import BlocoSobre from '@containers/Blocos/BlocoSobre'
 
+import IconsTech from '@layout/Home/IconsTech'
+
 import { Icon } from '@basics/icons'
 
 export default function ContainerPrincipal() {
@@ -26,15 +28,25 @@ export default function ContainerPrincipal() {
                 </path>
             </svg>
 
-            {/*     -----    Bloco Projetos     -----    */}
-            <section id='projetos' style={{ backgroundColor: '#f1f1f1' }}>
-                <BlocoProjetos />
+
+            <section style={{ backgroundColor: '#f1f1f1', height: '105%' }}>
+
+                {/*     -----    Bloco Projetos     -----    */}
+                <section id='projetos'>
+                    <BlocoProjetos />
+                </section>
+
+                <section>
+                    <IconsTech />
+                </section>
+
+                {/*     -----    Bloco Sobre     -----    */}
+                <section id='sobre'>
+                    <BlocoSobre />
+                </section>
+
             </section>
 
-            {/*     -----    Bloco Sobre     -----    */}
-            <section id='sobre' style={{ backgroundColor: '#f1f1f1' }}>
-                <BlocoSobre />
-            </section>
 
             {/*     =====>    Curva inferior */}
             <svg className='curva_page' viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +60,7 @@ export default function ContainerPrincipal() {
             {/*     =====>    Rodapé */}
             <div className={style.rodape_view} id='contatos' >
 
-                <p>© 2026 Vitória Amaral — Full Stack Developer</p>
+                <p style={{ fontSize: '25px' }}>© 2026 Vitória Amaral. Todos os direitos reservados.</p>
 
                 <div className={style.rodape_icons}>
                     <a href="https://github.com/Vittammy"
